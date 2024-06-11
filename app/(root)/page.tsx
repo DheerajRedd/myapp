@@ -2,7 +2,7 @@
 
 import PodcastCard from "@/components/PodcastCard";
 import { podcastData } from "@/constants";
-import { Podcast } from "lucide-react";
+
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 
@@ -13,9 +13,7 @@ const Home = () => {
       <section className="flex flex-col gap-5">
         <h1 className="text-20 font-bold text-white-1">Trending Podcasts</h1>
         <div className="podcast_grid">
-          <div className="flex min-h-screen flex-col items-center justify-between p-24 text-white-1">
-            {tasks?.map(({ _id, text }) => <div key={_id}>{text}</div>)}
-          </div>
+          <div className="flex min-h-screen flex-col items-center justify-between p-24 text-white-1"></div>
           {podcastData.map(({ id, title, description, imgURL }) => (
             <PodcastCard
               key={id}
